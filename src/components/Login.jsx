@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Login = () => {
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,7 +17,7 @@ const Login = () => {
         </div>
         <div className="row-two">
           <form onSubmit={handleSubmit}>
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               placeholder="Your email"
@@ -26,7 +26,7 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               placeholder="*******"
@@ -37,7 +37,9 @@ const Login = () => {
             />
             <button>Login</button>
           </form>
-          <button>New here? Register</button>
+          <button onClick={() => props.onFormSwitch("register")}>
+            New here? Register
+          </button>
         </div>
       </div>
     </>

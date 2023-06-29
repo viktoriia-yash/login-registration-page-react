@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Register = () => {
+const Register = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -18,14 +18,14 @@ const Register = () => {
         </div>
         <div className="row-two">
           <form onSubmit={handleSubmit}>
-            <label for="username">Username</label>
+            <label htmlFor="username">Username</label>
             <input
               name="username"
               id="username"
               placeholder="Your username"
               value={username}
             />
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               name="email"
               id="email"
@@ -34,7 +34,7 @@ const Register = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input
               name="password"
               id="password"
@@ -45,7 +45,9 @@ const Register = () => {
             />
             <button>Join</button>
           </form>
-          <button>Already have an account? Login</button>
+          <button onClick={() => props.onFormSwitch("login")}>
+            Already have an account? Login
+          </button>
         </div>
       </div>
     </>
