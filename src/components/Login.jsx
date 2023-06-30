@@ -13,11 +13,14 @@ const Login = (props) => {
     <>
       <div className="page">
         <div className="row-one">
-          <h1></h1>
+          <h2>Welcome</h2>
+          <h2>back!</h2>
         </div>
         <div className="row-two">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email</label>
+          <form onSubmit={handleSubmit} className="login-form">
+            <label htmlFor="email" className="email-header">
+              Email
+            </label>
             <input
               type="email"
               placeholder="Your email"
@@ -26,7 +29,9 @@ const Login = (props) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password" className="password-header">
+              Password
+            </label>
             <input
               type="password"
               placeholder="*******"
@@ -35,9 +40,9 @@ const Login = (props) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button>Login</button>
+            <button className="enter-btn">Login</button>
           </form>
-          <button onClick={() => props.onFormSwitch("register")}>
+          <button onClick={() => props.onFormSwitch("register")} className="switch-btn">
             New here? Register
           </button>
         </div>

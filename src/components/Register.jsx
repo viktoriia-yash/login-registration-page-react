@@ -14,18 +14,25 @@ const Register = (props) => {
     <>
       <div className="page">
         <div className="row-one">
-          <h1></h1>
+          <h2>Nice to</h2>
+          <h2>meet you</h2>
         </div>
         <div className="row-two">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username</label>
+          <form onSubmit={handleSubmit} className="login-form">
+            <label htmlFor="username" className="username-header">
+              Username
+            </label>
             <input
               name="username"
               id="username"
               placeholder="Your username"
+              type="text"
               value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="email-header">
+              Email
+            </label>
             <input
               name="email"
               id="email"
@@ -34,7 +41,9 @@ const Register = (props) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password" className="password-header">
+              Password
+            </label>
             <input
               name="password"
               id="password"
@@ -43,9 +52,12 @@ const Register = (props) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button>Join</button>
+            <button className="enter-btn">Join</button>
           </form>
-          <button onClick={() => props.onFormSwitch("login")}>
+          <button
+            onClick={() => props.onFormSwitch("login")}
+            className="switch-btn"
+          >
             Already have an account? Login
           </button>
         </div>

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  background-color: #37306b;
+  color: #ffffd0;
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: transitionIn 0.75s;
+}
+
+.row-one,
+.row-two {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-family: "Gloock", serif;
+  font-size: 110px;
+  letter-spacing: 10px;
+}
+
+.row-two {
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.username-header,
+.email-header,
+.password-header {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  letter-spacing: 5px;
+  margin-bottom: 0.3rem;
+}
+
+#username,
+#email,
+#password {
+  width: 300px;
+  padding: 10px 0 5px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #7858a6;
+  outline: none;
+  color: #ffffd0;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 208, 0.5);
+}
+
+.enter-btn,
+.switch-btn {
+  cursor: pointer;
+  color: #ffffd0;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: transparent;
+}
+
+.enter-btn {
+  width: 100px;
+  padding: 5px 0;
+  border: 3px solid #7858a6;
+  border-radius: 3rem;
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.switch-btn {
+  border: none;
+  border-bottom: 3px solid #7858a6;
+  padding-bottom: 5px;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
