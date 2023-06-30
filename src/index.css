@@ -89,7 +89,7 @@ input::placeholder {
   border-radius: 3rem;
   font-size: 15px;
   letter-spacing: 3px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .switch-btn {
@@ -108,5 +108,28 @@ input::placeholder {
   to {
     opacity: 1;
     transform: rotate(0);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  h2 {
+    font-size: 80px;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row-one {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .row-one {
+    display: none;
+  }
+
+  h2 {
+    font-size: 30px;
   }
 }
