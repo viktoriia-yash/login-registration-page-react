@@ -9,6 +9,8 @@ const Register = (props) => {
     e.preventDefault();
   };
 
+  document.title = "Join Us | Viktoriia Yash Project";
+
   return (
     <>
       <div className="page">

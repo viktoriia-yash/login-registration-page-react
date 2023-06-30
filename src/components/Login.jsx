@@ -8,6 +8,8 @@ const Login = (props) => {
     e.preventDefault();
   };
 
+  document.title = "Login | Viktoriia Yash Project";
+
   return (
     <>
       <div className="page">
