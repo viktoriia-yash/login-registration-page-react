@@ -5,9 +5,8 @@ const Register = (props) => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
-  const handleSubmit = () => {
-    email.preventDefault();
-    console.log(email);
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
 
   return (

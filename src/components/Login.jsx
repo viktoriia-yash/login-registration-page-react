@@ -4,9 +4,8 @@ const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = () => {
-    email.preventDefault();
-    console.log(email);
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -42,7 +41,10 @@ const Login = (props) => {
             />
             <button className="enter-btn">Login</button>
           </form>
-          <button onClick={() => props.onFormSwitch("register")} className="switch-btn">
+          <button
+            onClick={() => props.onFormSwitch("register")}
+            className="switch-btn"
+          >
             New here? Register
           </button>
         </div>
