@@ -61,6 +61,17 @@ const Register = (props) => {
           >
             Already have an account? Login
           </button>
+          <p className="credit">
+            <a
+              href="https://github.com/viktoriia-yash/login-registration-page-react"
+              className="github"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Open-source code
+            </a>{" "}
+            by Viktoriia Yashkina
+          </p>
         </div>
       </div>
     </>

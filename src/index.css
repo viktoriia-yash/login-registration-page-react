@@ -96,8 +96,19 @@ input::placeholder {
   border: none;
   border-bottom: 3px solid #7858a6;
   padding-bottom: 5px;
+  margin-bottom: 1rem;
   font-size: 13px;
   letter-spacing: 3px;
+}
+
+.credit {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.github {
+  color: #ffffd0;
 }
 
 @keyframes transitionIn {
